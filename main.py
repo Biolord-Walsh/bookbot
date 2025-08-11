@@ -3,11 +3,12 @@ def get_book_text(filepath):
     with open(filepath) as f:
         return f.read()
 
-# CH2 Lesson 2 Assignment Part 3 function.
-# Instructions: (Use) get_book_text with the relative path to your frankenstein.txt file to print 
-# the entire contents of the book to the console.
+#runs functions in stats
+from stats import count_words
+
+#defines path, prints word count
 def main():
     book_content = get_book_text("./books/frankenstein.txt")
-    print(book_content)
+    print(f"{count_words(book_content)} words found in the document")
 
 main()
